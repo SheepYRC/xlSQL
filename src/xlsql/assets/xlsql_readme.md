@@ -9,10 +9,12 @@ This project uses `xlSQL` for data querying and analysis.
 
 ## How to use
 
-Run SQL queries directly against your local data files:
+Run SQL queries directly against your local data files.
+
+**Windows Tip**: Use square brackets `[ ]` for table names to avoid complex quote escaping in terminals.
 
 ```bash
-xlsql query --file ./data/your_file.csv --sql "SELECT * FROM your_file LIMIT 10"
+xlsql query --file ./data/sales.xlsx --sql "SELECT * FROM [sales] WHERE amount > 1000 LIMIT 10"
 ```
 
 ## AI Agent Integration

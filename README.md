@@ -39,7 +39,11 @@ uv run xlsql query --file sales.csv --sql "SELECT * FROM sales"
 
 ### 1. `query` (数据查询)
 ```bash
-xlsql query --file data.xlsx --file info.json --sql "SELECT * FROM data JOIN info ON data.id = info.id"
+# 通用写法 (在 Windows 终端推荐使用 [ ] 包裹带特殊字符的表名)
+xlsql query --file data.xlsx --sql "SELECT * FROM [data]"
+
+# 连接查询示例
+xlsql query --file data.xlsx --file info.json --sql "SELECT * FROM [data] JOIN [info] ON [data].id = [info].id"
 ```
 
 ### 2. `schema` (查看结构)
