@@ -41,9 +41,9 @@ ENV/
 
 # 忽略运行时在根目录生成的资产副本
 # 原始资源保留在 src/xlsql/assets/ 中
-xlsql_skill.md
-xlsql_readme.md
-*_cleaned.xlsx
+/xlsql_skill.md
+/xlsql_readme.md
+/*_cleaned.xlsx
 
 # 数据文件 (临时结果)
 results/
