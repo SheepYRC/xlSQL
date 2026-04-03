@@ -1,0 +1,50 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+.python-version
+.xlsql/
+*.db
+*.duckdb
+
+# 忽略运行时在根目录生成的资产副本
+# 原始资源保留在 src/xlsql/assets/ 中
+xlsql_skill.md
+xlsql_readme.md
+*_cleaned.xlsx
+
+# 数据文件 (临时结果)
+results/
+tmp/
