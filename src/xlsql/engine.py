@@ -10,8 +10,11 @@ def run_query(args):
     try:
         load_files(con, args.file)
 
+        # 适配 Windows 终端: 允许用户使用 [table_name] 来替代难用的 \"table_name\"
+        sql_final = args.sql.replace('[', '"').replace(']', '"')
+        
         # 使用子查询限制结果集，防止 LIMIT 冲突
-        sql = f"SELECT * FROM ({args.sql}) LIMIT {args.limit}"
+        sql = f"SELECT * FROM ({sql_final}) LIMIT {args.limit}"
         
         # 使用 Polars 获取结果
         df = con.execute(sql).pl()
