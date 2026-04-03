@@ -147,6 +147,18 @@ Common fixes:
 
 ---
 
+# Windows Syntax Tip (CRITICAL for Agent)
+
+When running queries on Windows (CMD/PowerShell), ALWAYS use square brackets `[ ]` for table names to avoid quote nesting issues.
+
+Example:
+```bash
+xlsql query --file "Data File.xlsx" --sql "SELECT * FROM [Data File] LIMIT 10"
+```
+(Matches DuckDB/SQL identifier rules internally but much safer in shell).
+
+---
+
 # Anti-Patterns (DO NOT DO)
 
 - Do NOT skip preview
